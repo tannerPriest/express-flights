@@ -3,5 +3,12 @@
 <h1>This is the main list of airlines page</h1>
 <p><a href="/airline/new">Click here</a> to schedule a flight</p>
 
+<h3>This is a list of current flights</h3>
+<ul>
+        <% list.forEach(flight => {%>
+        <li><%= flight.title %> - <%= flight.releaseYear %> - <%= flight.mpaaRating %> - <%= flight.nowShowing %></li>
+    </ul>
+   <% }) %>
+
 <%- include('../partials/footer') %>
 

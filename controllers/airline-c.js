@@ -1,7 +1,15 @@
 const airModel = require('../models/airline-m');
 
 const index = (req, res) => {
-    res.render('airline-v/index');
+    airModel.find({}, (err, list) => {
+        if(err){
+            res.render('error')
+            return console.log(err)
+        } 
+        res.render('airline-v/index', {
+            list: flight,
+        }); 
+    })
 };
   
 const newFlight = (req, res) => {
