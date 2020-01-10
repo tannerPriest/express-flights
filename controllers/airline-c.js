@@ -18,7 +18,6 @@ const create = (req, res) => {
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key]
       }
-      req.body.departDate.split(' ')
     const flight = new airModel(req.body)
     flight.save(function(err) {
       if (err) return console.log("GETTING TO airCtrl.create ERROR"), res.render('error')

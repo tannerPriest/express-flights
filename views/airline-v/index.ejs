@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
 
-<h1>This is the main list of airlines page</h1>
+<h1>FLIGHTS</h1>
+
 <p><a href="/airline/new">Click here</a> to schedule a flight</p>
 
-<h3>This is a list of current flights</h3>
+<h3>List of current flights</h3>
 <ul>
     <% list.forEach(flight => {%>
         <li><span class="num">Flight Number: <%= flight.flightNum %> </span>
             - 
             <span class="title">Airline: <%= flight.title %></span>
             - 
-           <span class="date">Flight Departure Date: <%= flight.departDate %></span>
+           <span class=>Flight Departure Date: <%= flight.departDate %></span>
         </li>
     <% }) %>
     </ul>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/airline', {useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect('mongodb://localhost/airlines', {useNewUrlParser: true, useCreateIndex: true});
 
 const db = mongoose.connection;
 
