@@ -21,7 +21,6 @@ const create = (req, res) => {
     const flight = new airModel(req.body)
     flight.save(function(err) {
       if (err) return console.log("GETTING TO airCtrl.create ERROR"), res.render('error')
-      console.log(flight);
       res.redirect('/airline');
     })
   }

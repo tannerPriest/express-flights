@@ -21,10 +21,18 @@
                 <div id="depart">
                         <label>Arrival Airport:
                             <select name="airport">
-                              <option value="AUS">AUS</option>
-                              <option value="DAL">DAL</option>
-                              <option value="LAX">LAX</option>
-                              <option value="SEA">SEA</option>
+                              <% if (flight.airport !== "AUS") { %>
+                                <option value="AUS">AUS</option>
+                              <% } %>
+                              <% if (flight.airport !== "DAL") { %>
+                                <option value="DAL">DAL</option>
+                              <% } %>
+                              <% if (flight.airport !== "LAX") { %>
+                                <option value="LAX">LAX</option>
+                              <% } %>
+                              <% if (flight.airport !== "SEA") { %>
+                                <option value="SEA">SEA</option>
+                              <% } %>
                             </select>
                           </label>
                       <label>Arrival Date: 

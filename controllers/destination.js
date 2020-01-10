@@ -7,7 +7,6 @@ const create = (req, res) => {
         if(err){
             console.log(`HAD ERR AT SAVE${err}`)
         }
-        console.log(`SAVED DEST ${dest}`)
         res.redirect(`/airline/${dest._id}`); 
         });
 
