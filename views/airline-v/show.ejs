@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<ul>
+            <li>
+                <span class="port">Airport: <%= flight.airport %> </span>
+                - 
+                <span class="line">Airline: <%= flight.title %></span>
+            </li>
+            <li>
+                <span class="depart">Departure Date: <%= flight.departDate %></span>
+                 - 
+                <span class="flightNum">Flight Number: <%= flight.flightNum %> </span>
+            </li>
+            <li>
+        <span class="arrival">Arrival Date: <%= flight.arrive.arrival %></span>
+         - 
+        <span class="flightNum">Arriving Airport: <%= flight.arrive.airport %> </span>
+    </li>
+</ul>
+
+    <%- include('../partials/footer') %>

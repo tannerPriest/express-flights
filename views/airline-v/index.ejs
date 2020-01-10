@@ -7,11 +7,18 @@
 <h3>List of current flights</h3>
 <ul>
     <% list.forEach(flight => {%>
-        <li><span class="num">Flight Number: <%= flight.flightNum %> </span>
+        <li>
+            <span class="port">Airport: <%= flight.airport %> </span>
             - 
-            <span class="title">Airline: <%= flight.title %></span>
-            - 
-           <span class=>Flight Departure Date: <%= flight.departDate %></span>
+            <span class="line">Airline: <%= flight.title %></span>
+        </li>
+        <li class="space">
+            <span class="depart">Departure Date: <%= flight.departDate %></span>
+             - 
+            <span class="flightNum">Flight Number: <%= flight.flightNum %> </span>
+            <form id="form" action="/airline/<%= flight._id %>" method="get">
+                <input type="submit" name="" value="Details" class="button">
+            </form>
         </li>
     <% }) %>
     </ul>

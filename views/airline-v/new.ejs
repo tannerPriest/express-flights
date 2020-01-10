@@ -2,20 +2,46 @@
 
 <h1>Create a new flight </h1>
 <form action="/airline" method="POST">
+  <div id="arrive">
+  <label>Departing Airport:
+    <select name="airport">
+      <option value="AUS">AUS</option>
+      <option value="DAL">DAL</option>
+      <option value="LAX">LAX</option>
+      <option value="SEA">SEA</option>
+    </select>
+  </label>
     <label>Airline:
     <select name="title">
       <option value="American">American</option>
       <option value="Southwest">Southwest</option>
       <option value="United">United</option>
     </select> </label
-  ><br />
+  ><br/>
     <label>Departure Date: 
         <input type="datetime-local" 
         name="departDate" 
         min="2018-06-07T00:00" 
         max="2025-12-31T00:00" required>
+    </label><br/>
+  </div>
+  <div id="depart">
+      <label>Arrival Airport:
+          <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DAL">DAL</option>
+            <option value="LAX">LAX</option>
+            <option value="SEA">SEA</option>
+          </select>
+        </label>
+    <label>Arrival Date: 
+      <input type="datetime-local" 
+      name="arrivalDate" 
+      min="2018-06-07T00:00" 
+      max="2025-12-31T00:00" required>
     </label><br />
-    <input type="submit" value="Make Flight" id="submit"/>
+  </div>
+    <input class="button" type="submit" value="Make Flight" id="submit"/>
   </form>
 <p><a href="/airline">Click here</a> go back to the list.</p>
 

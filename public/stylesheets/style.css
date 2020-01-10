@@ -14,6 +14,29 @@ select, input{
   font-size: 16px;
   margin: 4.5px;
 }
+.button {
+  height: 30px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #e90c0c;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3.5px #999;
+}
+
+.button:hover {background-color: #b40000}
+
+.button:active {
+  background-color: #e90c0c;
+  box-shadow: 0 3px #666;
+  transform: translateY(2px);
+}
 p {
   margin: 10px;
 }
@@ -24,23 +47,40 @@ h1 {
 li {
   list-style: none;
   font-size: 20px;
+  margin: 10px;
 }
 a {
   color: rgb(6, 72, 255);
   font-size: 16px;
 }
-.num {
+.port {
+  color: rgb(255, 145, 0);
+}
+.flightNum {
   color: rgb(0, 87, 87);
 }
 .date {
   color: rgb(0, 102, 255);
 }
-.title {
+.line {
   color: rgb(179, 37, 37);
+}
+.space {
+  border-bottom: black solid 2px;
+  padding-bottom: 10px;
+  margin: 15px auto;
+  width: max-content;
 }
 #submit {
   font-size: 20px;
+  width: 125px;
 }
 #index {
   padding: 40px;
+}
+#form {
+  display: inline;
+}
+.depart {
+  color: chartreuse;
 }
