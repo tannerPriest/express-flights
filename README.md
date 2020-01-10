@@ -17,7 +17,7 @@ A web browser App that shows a list of Airline flights and gives the user the ab
 ## Screenshots
 ---
 
-![alt text]( "Index Screen")
-![alt text]( "List Flight Screen")
-![alt text]( "Make New Flight Screen")
-![alt text]( "With Updated List")
+![alt text](https://github.com/killerwhiteshark/express-flights/blob/master/screenshots/Screen%20Shot%202020-01-09%20at%209.36.18%20PM.png?raw=true "Index Screen")
+![alt text](https://github.com/killerwhiteshark/express-flights/blob/master/screenshots/Screen%20Shot%202020-01-09%20at%209.36.25%20PM.png?raw=true "List Flight Screen")
+![alt text](https://github.com/killerwhiteshark/express-flights/blob/master/screenshots/Screen%20Shot%202020-01-09%20at%209.36.47%20PM.png?raw=true "Make New Flight Screen")
+![alt text](https://github.com/killerwhiteshark/express-flights/blob/master/screenshots/Screen%20Shot%202020-01-09%20at%209.36.53%20PM.png?raw=true "With Updated List")
