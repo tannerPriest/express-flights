@@ -13,9 +13,9 @@
             </li>
             <li>
         <% if (flight.arrive.length) { %>
-                <span class="arrival">Arrival Date: <%= flight.arrive.arrival %></span>
+                <span class="arrival">Arrival Date: <%= flight.arrive[0].arrival %></span>
                  - 
-                <span class="flightNum">Arriving Airport: <%= flight.arrive.airport %> </span>
+                <span class="flightNum">Arriving Airport: <%= flight.arrive[0].airport %> </span>
             <% } else { %>
                 <form action="/airline/<%= flight._id %>" method="POST">
                 <div id="depart">
@@ -28,7 +28,7 @@
                             </select>
                           </label>
                       <label>Arrival Date: 
-                        <input type="datetime-local" 
+                        <input name="arrival" type="datetime-local" 
                         name="arrivalDate" 
                         min="2018-06-07T00:00" 
                         max="2025-12-31T00:00" required>

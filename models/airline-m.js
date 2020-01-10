@@ -9,7 +9,10 @@ const destinationSchema = new Schema({
      arrival: {
         type: String,
      }
-});
+},
+{
+    timestamps: true
+  });
 
 const airSchema = new Schema({
     airport: {
