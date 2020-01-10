@@ -15,7 +15,7 @@ select, input{
   margin: 4.5px;
 }
 p {
-  margin: 0px;
+  margin: 10px;
 }
 h1 {
   margin-top: 8px;
@@ -26,14 +26,18 @@ li {
   font-size: 20px;
 }
 a {
-  color: #00B7FF;
+  color: rgb(6, 72, 255);
+  font-size: 16px;
 }
 .num {
-  color: teal;
+  color: rgb(0, 87, 87);
 }
 .date {
   color: rgb(0, 102, 255);
 }
 .title {
-  color: #00B7FF;
+  color: rgb(179, 37, 37);
+}
+#submit {
+  font-size: 20px;
 }
