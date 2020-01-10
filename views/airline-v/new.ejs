@@ -9,9 +9,10 @@
       <option value="United">United</option>
     </select> </label
   ><br />
-    <label>Departure Date: <input type="text" name="departDate" /> </label><br />
+    <label>Departure Date: <input type="datetime-local" id="departDate" name="departDate" min="datetime" max="2022-01"></label><br />
     <input type="submit" value="Make Flight" />
   </form>
 <p><a href="/airline">Click here</a> go back to the list.</p>
 
 <%- include('../partials/footer') %>
+

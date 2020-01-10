@@ -5,10 +5,16 @@
 
 <h3>This is a list of current flights</h3>
 <ul>
-        <% list.forEach(flight => {%>
-        <li><%= flight.title %> - <%= flight.releaseYear %> - <%= flight.mpaaRating %> - <%= flight.nowShowing %></li>
+    <% list.forEach(flight => {%>
+        <li><span class="num">Flight Number: <%= flight.flightNum %> </span>
+            - 
+            <span class="title">Airline: <%= flight.title %></span>
+            - 
+           <span class="date">Flight Departure Date: <%= flight.departDate %></span>
+        </li>
+    <% }) %>
     </ul>
-   <% }) %>
+
 
 <%- include('../partials/footer') %>
 
