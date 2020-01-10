@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
-<ul>
+
+<ul id="show">
             <li>
                 <span class="port">Airport: <%= flight.airport %> </span>
                 - 
@@ -11,10 +12,34 @@
                 <span class="flightNum">Flight Number: <%= flight.flightNum %> </span>
             </li>
             <li>
-        <span class="arrival">Arrival Date: <%= flight.arrive.arrival %></span>
-         - 
-        <span class="flightNum">Arriving Airport: <%= flight.arrive.airport %> </span>
-    </li>
+        <% if (flight.arrive.length) { %>
+                <span class="arrival">Arrival Date: <%= flight.arrive.arrival %></span>
+                 - 
+                <span class="flightNum">Arriving Airport: <%= flight.arrive.airport %> </span>
+            <% } else { %>
+                <form action="/airline/<%= flight._id %>" method="POST">
+                <div id="depart">
+                        <label>Arrival Airport:
+                            <select name="airport">
+                              <option value="AUS">AUS</option>
+                              <option value="DAL">DAL</option>
+                              <option value="LAX">LAX</option>
+                              <option value="SEA">SEA</option>
+                            </select>
+                          </label>
+                      <label>Arrival Date: 
+                        <input type="datetime-local" 
+                        name="arrivalDate" 
+                        min="2018-06-07T00:00" 
+                        max="2025-12-31T00:00" required>
+                      </label><br />
+                    </div>
+                    <input class="button" type="submit" value="Set Destination" id="set"/>
+                </form>
+           <% } %>
+            </li>
 </ul>
+
+    <p><a href="/airline">Click here</a> go back to the list.</p>
 
     <%- include('../partials/footer') %>

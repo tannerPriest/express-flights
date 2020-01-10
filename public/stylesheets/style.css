@@ -81,6 +81,12 @@ a {
 #form {
   display: inline;
 }
+#set {
+  width: 135px;
+}
+#show {
+  margin-top: 130px;
+}
 .depart {
   color: chartreuse;
 }

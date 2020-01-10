@@ -25,9 +25,22 @@ const create = (req, res) => {
       res.redirect('/airline');
     })
   }
+const show = (req, res) => {
+    airModel.findById(req.params.id, (err, flight) => {
+        if(err){
+            res.render('error')
+            return console.log(err)
+        } 
+        res.render('airline-v/show', {  
+          flight: flight
+        });
+        }
+    )
+};
 
 module.exports = {
     index,
     new: newFlight,
     create,
+    show,
 } 
