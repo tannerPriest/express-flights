@@ -21,7 +21,6 @@ const airSchema = new Schema({
      },
     title:  {
         type: String,
-        // enum: ['American', 'Southwest' & 'United'],
         required: true
         },
     departDate: {
