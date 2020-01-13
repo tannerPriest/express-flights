@@ -36,6 +36,10 @@ const airSchema = new Schema({
         }
     },
     arrive: [destinationSchema],
+    ticket: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Ticket'
+    }],
 },
 {
     timestamps: true,

@@ -1,4 +1,5 @@
 const airModel = require('../models/airline-m');
+const ticketModel = require('../models')
 
 const index = (req, res) => {
     airModel.find({}, (err, flight) => {
@@ -25,16 +26,16 @@ const create = (req, res) => {
     })
   }
 const show = (req, res) => {
-    airModel.findById(req.params.id, (err, flight) => {
-        if(err){
-            res.render('error')
-            return console.log(err)
-        } 
-        res.render('airline-v/show', {  
-          flight: flight
-        });
-        }
-    )
+    airModel.findById(req.params.id)
+    .populate('ticket').exec( (err, flight) => {
+        // Performer.find({}).where('_id').nin(movie.cast)
+        ticketModel.find({_id: {$nin: flight.ticket}},(err, seat) => {
+            res.render('airline-v/show', {  
+                flight: flight
+              });
+          }
+        );
+      });
 };
 
 module.exports = {
