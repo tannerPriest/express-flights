@@ -1,13 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const airCtrl = require('../controllers/airline-c');
-const destCrtl = require('../controllers/destination')
+const destCtrl = require('../controllers/destination')
+const ticketCtrl = require('../controllers/ticket-c')
 
 router.get('/', airCtrl.index);
 router.get('/new', airCtrl.new);
 router.get('/:id', airCtrl.show);
+router.get('/:id/tickets/new', ticketCtrl.index)
 
 router.post('/', airCtrl.create);
-router.post('/:id', destCrtl.create);
+router.post('/:id', destCtrl.create);
+router.post('/:id/ticket', ticketCtrl.create)
 
 module.exports = router;

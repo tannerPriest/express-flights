@@ -1,5 +1,5 @@
 const airModel = require('../models/airline-m');
-const ticketModel = require('../models')
+const ticketModel = require('../models/ticket-m')
 
 const index = (req, res) => {
     airModel.find({}, (err, flight) => {
