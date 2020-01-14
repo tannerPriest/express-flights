@@ -6,11 +6,6 @@ const ticketSchema = new Schema({
         type: String,
         match: /[A-F][1-9]\d?/,
     },
-    price: {
-        type: Number,
-        required: true,
-        default: 150
-    }
 }, {
     timestamps: true
 });

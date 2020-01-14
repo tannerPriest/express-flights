@@ -45,9 +45,27 @@
                     <input class="button" type="submit" value="Set Destination" id="set"/>
                 </form>
            <% } %>
+           <ul>
+             <span style="text-decoration: underline; margin: 15px;">Current Tickets</span>
             </li>
+            <% flight.ticket.forEach((ticket) => { %>
+            <li>
+              <%= ticket.seat %> and the price is $<%=flight.price%>
+            </li>              
+            <%})%>             
+           </ul>
 </ul>
-<p><a href="/airline/<%= flight._id %>/tickets/new">Click here</a> for a new ticket.</p>
+
+
+  <form id="add-per-to-cast" action="/airline/<%= flight._id%>/ticket" method="POST">
+    <select name="ticketId">
+        <%- ticket.map(p =>
+    `<option value="${p._id}">${p.seat}</option>`
+    ).join('') %>
+    </select>
+    <button type="submit">Add ticket to flight</button>
+  </form>
+
     <p class="new-ticket"><a href="/airline">Click here</a> go back to the list.</p>
 
     <%- include('../partials/footer') %>

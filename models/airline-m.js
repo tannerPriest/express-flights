@@ -40,6 +40,12 @@ const airSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Ticket'
     }],
+    price: {
+        type: Number,
+        default:  function(){
+            return Math.floor(Math.random() * 300)
+        }
+    }
 },
 {
     timestamps: true,

@@ -1,9 +1,17 @@
 <%- include('../partials/header') %>
-
-<form action="/airline/<%= flight._id %>/ticket" method="POST">
-    <input name="seat" required pattern="[A-F][1-50]\d?" placeholder="Example: F9 or A99"/>
-    <input type="submit" value="Add ticket to Flight No.<%=flight.flightNum %>">
+<p>Please first ensure that the Ticket Number is not in the dropdown
+        <select>
+        <% ticket.forEach(function(t) { %>
+        <option><%= t.seat %></option>
+        <% }) %>
+        </select>
+        </p>
+<form action="/airline/ticket" method="POST">
+    <label>Ticket Prices: $ <%= ticket.price %></label>
+    <input name="seat" required pattern="[A-F][1-99]\d?" placeholder="Example: F9 or A99"/>
+    <input type="submit" value="Add ticket to Flight No.<%=ticket.flightNum %>">
 </form>
 
+<p class="new-ticket"><a href="/airline">Click here</a> go back to the list.</p>
 
 <%- include('../partials/footer') %>

@@ -31,7 +31,8 @@ const show = (req, res) => {
         // Performer.find({}).where('_id').nin(movie.cast)
         ticketModel.find({_id: {$nin: flight.ticket}},(err, seat) => {
             res.render('airline-v/show', {  
-                flight: flight
+                flight: flight,
+                ticket: seat,
               });
           }
         );
