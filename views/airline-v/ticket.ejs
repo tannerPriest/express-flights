@@ -8,7 +8,7 @@
         </p>
 <form action="/airline/ticket" method="POST">
     <label>Ticket Prices: $ <%= ticket.price %></label>
-    <input name="seat" required pattern="[A-F][1-99]\d?" placeholder="Example: F9 or A99"/>
+    <input name="seat" required pattern="[A-F][1-30]\d?" placeholder="Rows:A-F Seats:1-30"/>
     <input type="submit" value="Add ticket to Flight No.<%=ticket.flightNum %>">
 </form>
 
